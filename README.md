@@ -1,5 +1,7 @@
 # FluxoOdontes 🦷
 
+**Acesso Rápido:** [Teste o projeto ao vivo clicando aqui!](https://lucas-thiery.github.io/Fluxo-do-curso-de-odontologia/)
+
 Um sistema web interativo e gamificado desenvolvido para ajudar estudantes de Odontologia a planejarem sua jornada acadêmica. O projeto transforma a tradicional matriz curricular em um mapa visual e inteligente.
 
 ## Principais Funcionalidades
@@ -17,11 +19,11 @@ Este projeto foi construído sem o uso de frameworks externos, focando no domín
 * **CSS3:** Flexbox, animações de interface (keyframes e transitions), custom properties e pseudo-elementos.
 * **JavaScript (Vanilla):** Manipulação pesada da DOM, eventos, cálculos matemáticos, geração dinâmica de elementos SVG (criação de paths matemáticos e marcadores) e renderização condicional.
 
-## Como Executar o Projeto
+## Como Executar o Projeto (Localmente)
 
-Como o projeto utiliza apenas tecnologias nativas do navegador, a execução é simples e direta:
+Caso queira baixar e rodar o projeto na sua própria máquina, o processo é simples e direto:
 
-1. Clone este repositório: `git clone https://github.com/SEU_USUARIO/FluxoOdontes.git`
+1. Clone este repositório: `git clone https://github.com/lucas-thiery/Fluxo-do-curso-de-odontologia.git`
 2. Abra a pasta do projeto.
 3. Dê um duplo clique no arquivo `index.html` para abri-lo em qualquer navegador de sua preferência.
 
