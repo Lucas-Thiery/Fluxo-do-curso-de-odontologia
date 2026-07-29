@@ -1,0 +1,224 @@
+body{
+    background-color: #3b3b3b;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+main{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+.semestre{
+    flex: 1;
+    background-color: #333333;
+    border: 1px solid #333333;
+    padding: 15px;
+}
+
+.semestre h3{
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    border-bottom: 2px solid #800020;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+} 
+
+.materia{
+    background-color: #4a4a4a;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.materia:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    background-color: #800020;
+}
+
+header{
+    background-color: #800020;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2{
+    margin: 0;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover{
+    color: #0e7a13;
+}
+
+.materia.trancada{
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #2a2a2a;
+}
+
+.materia.trancada:hover{
+    transform: none;
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.materia.concluida{
+    background-color: #2e7d32;
+    color: white;
+}
+
+.materia.destaque-dependete{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    background-color: #800020;
+    color: white;
+}
+
+#setas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.seta-desenhada{
+    animation: aparecerSeta 0.3s ease forwards;
+    opacity: 0;
+}
+
+@keyframes aparecerSeta{
+    to{opacity: 1;}
+}
+
+#painel-progresso{
+    background-color: #333333;
+    padding: 20px 30px;
+    display: flex;
+    gap: 40px;
+    border-bottom: 2px solid #800020;
+}
+
+.barra-container{
+    flex: 1;
+}
+
+.barra-info{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.barra-fundo{
+    background-color: #4a4a4a;
+    border-radius: 10px;
+    height: 18px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.barra-preenchimento{
+    background-color: #2e7d32;
+    height: 100%;
+    width: 0%;
+    transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+.barra-preechimento.optativas-cor{
+    background-color: #0288d1;
+}
+
+footer{
+    background-color: #800020;
+    color: white;
+    text-align: center;
+    padding: 15px 30px;
+    margin-top: 40px;
+}
+
+.sobre-container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+        
+.sobre-texto {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.sobre-lista {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.sobre-lista li {
+    margin-bottom: 12px;
+}
+
+.destaque-verde { 
+    color: white; font-weight: bold; 
+}
+
+.destaque-bordo { 
+    color: white; font-weight: bold; 
+}
+
+.destaque-cinza { 
+    color: white; font-weight: bold; 
+}
+
+
+
+
+
+@media (max-width: 768px){
+    main{
+        flex-direction: column;
+    }
+    .semestre{
+        width: 100%;
+        min-width: auto;
+
+    }
+
+    #painel-progresso{
+        flex-direction: column;
+        gap: 20px;
+    }
+}

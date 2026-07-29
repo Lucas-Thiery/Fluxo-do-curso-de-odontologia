@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Fluxo de odontologia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <svg id="setas">
+        <defs>
+            <marker id="ponta-seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#800020">
+
+                </path>
+            </marker>
+        </defs>
+    </svg>
+
+    <header>
+        <h2>FluxoOdontes</h2>
+        <nav>
+            <a href="Index.html">Inicio</a>
+            <a href="optativas.html">Optativas</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <section id="painel-progresso">
+        <div class="barra-container">
+            <div class="barra-info">
+                <span> Materias obrigatorias</span>
+                <span id="texto-obrigatorias">0%</span>
+            </div>
+
+            <div class="barra-fundo">
+                <div class="barra-preenchimento" id="progresso-obrigatorias"></div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <main>
+        <section class="semestre"><h3> 1° semestre </h3>
+            <div class="materia" id="BIOE" data-horas="60">BIOESTATÍSTICA</div>
+            <div class="materia" id="IMC"  data-horas="60">INTRODUCAO A METODOLOGIA CIENTIFICA</div>
+            <div class="materia" id="BIOQ" data-horas="75">BIOQUÍMICA</div>
+            <div class="materia" id="EAH"  data-horas="60">ELEMENTOS DE ANATOMIA HUMANA</div>
+            <div class="materia" id="PSiG" data-horas="60">PSICOLOGIA GERAL</div>
+            <div class="materia" id="ANTO" data-horas="60">ANTROPOLOGIA I</div>
+            <div class="materia" id="SOCI" data-horas="60">SOCIOLOGIA I</div>
+        </section>
+
+        <section class="semestre"><h3> 2° semestre </h3>
+            <div class="materia trancada" id="FISH" data-requisito="EAH"  data-horas="120">FISIOLOGIA HUMANA</div>
+            <div class="materia trancada" id="ACP"  data-requisito="EAH"  data-horas="90">ANATOMIA DA CABEÇA E PESCOÇO</div>
+            <div class="materia trancada" id="BIOC" data-requisito="BIOQ" data-horas="60">BIOLOGIA CELULAR</div>
+            <div class="materia trancada" id="MICG" data-requisito="BIOQ" data-horas="60">MICROBIOLOGIA GERAL</div>
+            <div class="materia trancada" id="AED"  data-requisito="EAH"  data-horas="60">ANATOMIA E ESCULTURA DENTÁRIA</div>
+        </section>
+
+        <section class="semestre"><h3> 3° semestre </h3>
+            <div class="materia trancada" id="FARII" data-requisito="FISH" data-horas="75">FARMACOLOGIA II</div>
+            <div class="materia trancada" id="HEH"   data-requisito="BIOC" data-horas="90">HISTOLOGIA E EMBRIOLOGIA HUMANAS</div>
+            <div class="materia trancada" id="MI"    data-requisito="MICG" data-horas="60">MICROBIOLOGIA E IMUNOLOGIA</div>
+            <div class="materia trancada" id="PH"    data-requisito="BIOC" data-horas="75">PARASITOLOGIA HUMANA</div>
+        </section>
+
+        <section class="semestre"><h3> 4° semestre </h3>
+            <div class="materia trancada" id="GE"   data-requisito="BIOC"          data-horas="60">GENETICA E EVOLUCAO</div>
+            <div class="materia trancada" id="PPG"  data-requisito="BIOQ,FISH,HEH" data-horas="90">PROCESSOS PATOLOGICOS GERAIS</div>
+            <div class="materia trancada" id="OSI"  data-requisito="MI"            data-horas="60">ODONTOLOGIA SOCIAL I</div>
+            <div class="materia trancada" id="OCLU" data-requisito="ACP,AED"       data-horas="60">OCLUSÃO</div>
+            <div class="materia trancada" id="ANES" data-requisito="ACP"           data-horas="30">ANESTESIA</div>
+            <div class="materia trancada" id="ESB"  data-requisito="MICG"          data-horas="75">ESTOMATOLOGIA BASICA</div>
+            <div class="materia trancada" id="RABA" data-requisito="ACP,HEH"       data-horas="60">RADIOLOGIA BASICA</div>
+        </section>
+
+        <section class="semestre"><h3> 5° semestre </h3>
+            <div class="materia trancada" id="DRI"   data-requisito="ESB,RABA,OCLU,ANES" data-horas="120">DENTISTICA RESTAURADORA I</div>
+            <div class="materia trancada" id="OSII"  data-requisito="OSI"                data-horas="60">ODONTOLOGIA SOCIAL II</div>
+            <div class="materia trancada" id="CIRUI" data-requisito="ESB,RABA,ANES"      data-horas="90">CIRURGIA I</div>
+            <div class="materia trancada" id="PERII" data-requisito="ESB,RABA,ANES"      data-horas="75">PERIODONTIA I</div>
+            <div class="materia trancada" id="PAB"   data-requisito="PPG"                data-horas="60">PATOLOGIA BUCAL</div>
+        </section>
+
+        <section class="semestre"><h3> 6° semestre </h3>
+            <div class="materia trancada" id="DRII"   data-requisito="DRI"          data-horas="120">DENTISTICA RESTAURADORA II</div>
+            <div class="materia trancada" id="PT"     data-requisito="OCLU"         data-horas="90">PROTESE TOTAL</div>
+            <div class="materia trancada" id="CIRUII" data-requisito="CIRUI"        data-horas="90">CIRURGIA II</div>
+            <div class="materia trancada" id="DIO"    data-requisito="ESB,RABA,PAB" data-horas="150">DIAGNOSTICO ORAL</div>
+        </section>
+
+        <section class="semestre"><h3> 7° semestre </h3>
+            <div class="materia trancada" id="ENDO"   data-requisito="DRII,AED"       data-horas="120">ENDODONTIA</div>
+            <div class="materia trancada" id="PPR"    data-requisito="OCLU,PERII"     data-horas="90">PROTESE PARCIAL REMOVIVEL</div>
+            <div class="materia trancada" id="PERIII" data-requisito="CIRUII,PERII"   data-horas="45">PERIODONTIA II</div>
+            <div class="materia trancada" id="TRAU"   data-requisito="CIRUII,PERII"   data-horas="90">TRAUMATOLOGIA</div>
+            <div class="materia trancada" id="PEDI"   data-requisito="DRII,OSII,OCLU" data-horas="120">ODONTOPREDIATRIA I</div>
+        </section>
+
+        <section class="semestre"><h3> 8° semestre </h3>
+            <div class="materia trancada" id="PF"    data-requisito="DRII,PT,PPR" data-horas="90">PROTESE FIXA</div>
+            <div class="materia trancada" id="OL"    data-requisito="PPG,ANTO"    data-horas="60">ODONTOLOGIA LEGAL</div>
+            <div class="materia trancada" id="PEDII" data-requisito="PEDI"        data-horas="120">ODONTOPEDIATRIA II</div>
+        </section>
+
+        <section class="semestre"><h3> 9° semestre </h3>
+            <div class="materia trancada" id="COII" data-requisito="OSII,ENDO,CIRUII,DIO,PERIII" data-horas="360">CLINICA ODONTOLOGICA INTEGRADA I</div>
+        </section>
+
+        <section class="semestre"><h3> 10° semestre </h3>
+            <div class="materia trancada" id="COIII" data-requisito="COII" data-horas="360">CLINICA ODONTOLOGICA INTEGRADA II</div>
+
+        </section>
+    </main>
+
+    <footer>Desenvolvido por Lucas Thiery &copy; 2026 - projeto férias</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
